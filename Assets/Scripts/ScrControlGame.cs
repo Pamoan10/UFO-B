@@ -7,16 +7,27 @@ public class ScrControlGame : MonoBehaviour
     public static int punts = 0; //puntuació
     public static int pickups = 0; //nombre de pickups a l'escena
     public static int pickupRestants; //pickups restants
+    public static int temps; 
 
     private void Update()
     {
-        if (ScrControlGame.pickups == 0)
+        /*if (ScrControlGame.pickups == 0)
         {
             JocAcabat();
+        }*/
+
+        if(ScrControlGame.pickupRestants == 0)
+        {
+            NivellFinalitzat();
         }
     }
-    void JocAcabat()
+    void NivellFinalitzat()
+    {
+        print("End");
+    }
+
+    /*void JocAcabat()
     {
         print("S'ha acabat!");
-    }
+    }*/
 }
