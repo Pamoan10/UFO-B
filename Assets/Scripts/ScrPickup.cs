@@ -13,7 +13,7 @@ public class ScrPickup : MonoBehaviour
     void Awake()
     {
         ScrControlGame.pickups++;
-        ScrControlGame.pickupRestants++;
+   
     }
 
     // Update is called once per frame

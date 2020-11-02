@@ -1,33 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScrControlGame : MonoBehaviour
 {
     public static int punts = 0; //puntuació
     public static int pickups = 0; //nombre de pickups a l'escena
-    public static int pickupRestants; //pickups restants
-    public static int temps; 
+
+    [SerializeField] Text nivellFi;
 
     private void Update()
     {
-        /*if (ScrControlGame.pickups == 0)
-        {
-            JocAcabat();
-        }*/
-
-        if(ScrControlGame.pickupRestants == 0)
-        {
-            NivellFinalitzat();
-        }
+        if(ScrControlGame.pickups == 0) NivellFinalitzat();
+        ControlEntradaUsuari();
+       
     }
     void NivellFinalitzat()
     {
-        print("End");
+        //print("End");
+        nivellFi.text = "Fi del joc";
+        //ScrControlGame.pickups = -1;
     }
-
-    /*void JocAcabat()
+    void ControlEntradaUsuari()
     {
-        print("S'ha acabat!");
-    }*/
+        if (Input.GetKeyDown(KeyCode.X)) //ScrControlGame.pickups = 0; primer prototipus
+        EliminaPickups();
+    }
+    void EliminaPickups()
+    {
+        GameObject[] picks;
+        picks = GameObject.FindGameObjectsWithTag("Pickup");
+        foreach(GameObject p in picks)
+        {
+            pickups--;
+            punts += p.GetComponent<ScrPickup>().valor; //per incrementar X
+            Destroy(p);
+            
+            
+        }
+    }
 }

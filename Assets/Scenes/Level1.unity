@@ -157,7 +157,7 @@ Transform:
   - {fileID: 894693699}
   - {fileID: 884395311}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &113581651 stripped
 Transform:
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 556963814}
   - component: {fileID: 556963813}
   m_Layer: 5
-  m_Name: Nivell
+  m_Name: NivellFi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -391,7 +391,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Nivell completat!
+  m_Text: '
 
 '
 --- !u!222 &556963814
@@ -584,7 +584,7 @@ RectTransform:
   - {fileID: 667013392}
   - {fileID: 556963812}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -604,7 +604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puntuacio: {fileID: 1527502610}
-  pickupsRestants: {fileID: 1951782955}
+  pickups: {fileID: 1951782955}
   temps: {fileID: 667013393}
 --- !u!4 &884395311 stripped
 Transform:
@@ -688,7 +688,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1231135302 stripped
 Transform:
@@ -1072,6 +1072,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3094002309951514083a5e1bb28dcbf6, type: 3}
+--- !u!1 &1873143573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1873143574}
+  - component: {fileID: 1873143575}
+  m_Layer: 0
+  m_Name: CONTROL_GAME
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1873143574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873143573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 611.152, y: 307.78397, z: -338.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1873143575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873143573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ceef978da011049a0f3aa4b2b5460a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nivellFi: {fileID: 556963813}
 --- !u!1 &1951782954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1128,7 @@ GameObject:
   - component: {fileID: 1951782956}
   - component: {fileID: 1951782955}
   m_Layer: 5
-  m_Name: PickupsRestant
+  m_Name: Pickups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1343,7 +1387,7 @@ PrefabInstance:
     - target: {fileID: 4535678032042559751, guid: 8b966115dd0ea384c9399118515359e6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4535678032042559751, guid: 8b966115dd0ea384c9399118515359e6,
         type: 3}
@@ -1482,7 +1526,7 @@ PrefabInstance:
     - target: {fileID: 7477943583608292978, guid: bdadfe9cf6346114c8d3280cf3dc8b08,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7477943583608292978, guid: bdadfe9cf6346114c8d3280cf3dc8b08,
         type: 3}

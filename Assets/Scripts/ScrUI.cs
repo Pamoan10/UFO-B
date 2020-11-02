@@ -20,11 +20,10 @@ using UnityEngine.UI;
 public class ScrUI : MonoBehaviour
 {
     [SerializeField]
-    Text puntuacio; //per accedir a l'element de la UI
-    [SerializeField]
-    Text pickupsRestants; //per accedir a l'element de la UI    
-    [SerializeField]
-    Text temps; //per accedir al temps de la UI
+    Text puntuacio, pickups, temps; //per accedir a l'element de la UI
+
+    float crono = 0;
+    
     // Start is called before the first frame update
     
     void Start()
@@ -35,8 +34,9 @@ public class ScrUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        crono += Time.deltaTime;
         puntuacio.text = "Puntuació: " + ScrControlGame.punts;
-        pickupsRestants.text = "Pickups: " + ScrControlGame.pickupRestants;
-        temps.text = "Temps: " + Time.fixedTime;
+        pickups.text = "Pickups: " + ScrControlGame.pickups;
+        temps.text = "Temps: " + crono.ToString("0.0");
     }
 }
