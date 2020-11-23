@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -48,6 +47,8 @@ public class ScrControlGame : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2)) AudioListener.volume += 0.05f;
         AudioListener.volume = Mathf.Clamp(AudioListener.volume, 0, 1); //AudioListener por tenir nivells negatius, amb això ho delimito
         if (Input.GetKeyDown(KeyCode.Return) && ScrControlGame.pickups == 0) NextLevel();
+
+        if (Input.GetKeyDown(KeyCode.Escape)) Sortir();
     }
     void EliminaPickups()
     {
@@ -75,5 +76,9 @@ public class ScrControlGame : MonoBehaviour
         if (level < escenes.Length)
             SceneManager.LoadScene(escenes[level]); //array per que canvii de nivell
         else print("GAME OVER"); //prototipus
+    }
+    void Sortir()
+    {
+        Application.Quit(); //només funciona en el producte final, no en l'editor. Podem posar unes 5 linies de directiva de compilació. Si ets dins l'editor surt i, si ets a l'app has de fet això
     }
 }

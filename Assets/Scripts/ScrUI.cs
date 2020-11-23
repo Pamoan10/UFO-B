@@ -20,7 +20,7 @@ using UnityEngine.UI;
 public class ScrUI : MonoBehaviour
 {
     [SerializeField]
-    Text puntuacio, pickups, temps; //per accedir a l'element de la UI
+    Text puntuacio, pickups, temps, resolucio; //per accedir a l'element de la UI
 
     float crono = 0;
     
@@ -38,5 +38,6 @@ public class ScrUI : MonoBehaviour
         puntuacio.text = "Puntuació: " + ScrControlGame.punts;
         pickups.text = "Pickups: " + ScrControlGame.pickups;
         temps.text = "Temps: " + crono.ToString("0.0");
+        resolucio.text = Screen.width + " x " + Screen.height;
     }
 }
